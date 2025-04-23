@@ -12,7 +12,7 @@ interface ActionItemProps {
 const ActionItem: React.FC<ActionItemProps> = ({ name, label, onClick }) => {
   return (
     <li
-      className="cursor-pointer text-[#21272A] font-medium py-3 px2"
+      className="cursor-pointer text-CoolGray-90 font-medium py-3 px2"
       onClick={() => onClick(name)}
     >
       {label}

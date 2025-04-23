@@ -4,7 +4,7 @@ import PageNavigation from "../dicom/PageNavigation";
 const Header = () => {
   return (
     <header className="flex items-center px-10 py-4  w-full h-[116px] justify-between">
-      <h1 className="text-xl font-bold leading-[110%] text-[#697077]">
+      <h1 className="text-xl font-bold leading-[110%] text-CoolGray-60">
         Dicom Viewer(with Cornerstone.js)
       </h1>
 

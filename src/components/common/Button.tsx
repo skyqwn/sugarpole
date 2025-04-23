@@ -18,11 +18,11 @@ const Button: React.FC<ButtonProps> = ({
   const variantClasses =
     variant === "secondary"
       ? "text-black bg-transparent  hover:bg-gray-200 border-transparent"
-      : "text-white bg-[#0F62FE] hover:bg-[#0053D6] border-[#0F62FE]";
+      : "text-white bg-Primary ";
 
   return (
     <button
-      className={`${baseClasses} ${variantClasses} ${className} `}
+      className={`${baseClasses} ${variantClasses} ${className}  `}
       {...rest}
     >
       {children}

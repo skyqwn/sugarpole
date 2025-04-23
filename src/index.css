@@ -4,4 +4,22 @@
   html {
     font-family: "Roboto", system-ui, sans-serif;
   }
+
+  :root {
+    --color-text-CoolGray-60: #697077;
+    --color-text-CoolGray-90: #21272a;
+    --color-bg-Primary: #0f62fe;
+  }
+}
+
+@layer utilities {
+  .text-CoolGray-60 {
+    color: var(--color-text-CoolGray-60);
+  }
+  .text-CoolGray-90 {
+    color: var(--color-text-CoolGray-90);
+  }
+  .bg-Primary {
+    background-color: var(--color-bg-Primary);
+  }
 }
