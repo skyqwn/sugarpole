@@ -46,3 +46,5 @@
 - App.tsx # 메인 앱 컴포넌트
 - main.tsx # 앱 엔트리 포인트
 - index.css # 전역 스타일 및 Tailwind CSS 설정
+
+- prettierrc # tailwind prettier

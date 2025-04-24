@@ -1,8 +1,8 @@
-import React, { useCallback } from "react";
+import React, { useCallback } from 'react';
 
-import { useViewportActions } from "../../hooks/useViewportActions";
-import { useDicomViewerStore } from "../../store/dicomViewerStore";
-import { ViewportActionType } from "../../types/dicom";
+import { useViewportActions } from '../../hooks/useViewportActions';
+import { useDicomViewerStore } from '../../store/dicomViewerStore';
+import { ViewportActionType } from '../../types/dicom';
 
 interface ActionItemProps {
   name: keyof ViewportActionType;
@@ -13,7 +13,7 @@ interface ActionItemProps {
 const ActionItem = ({ name, label, onClick }: ActionItemProps) => {
   return (
     <li
-      className="cursor-pointer text-CoolGray-90 font-medium py-3 px2"
+      className="text-CoolGray-90 px2 cursor-pointer py-3 font-medium"
       onClick={() => onClick(name)}
     >
       {label}
@@ -28,7 +28,7 @@ const Toolbar = () => {
   const handleAction = useCallback(
     (actionName: keyof ViewportActionType) => {
       if (!renderingEngine.isViewportSetup || !renderingEngine.engine) {
-        console.log("렌더링 엔진이 준비되지 않아 액션을 실행할 수 없습니다.");
+        console.log('렌더링 엔진이 준비되지 않아 액션을 실행할 수 없습니다.');
         return;
       }
 
@@ -36,7 +36,7 @@ const Toolbar = () => {
         `${actionName} 액션 실행, 선택된 뷰포트: ${selectedViewportId}`
       );
       const action = actions[actionName];
-      if (action && typeof action === "function") {
+      if (action && typeof action === 'function') {
         action();
       }
     },
@@ -44,22 +44,22 @@ const Toolbar = () => {
   );
 
   const actionItems = [
-    { name: "zoomIn", label: "Zoom" },
-    { name: "flipH", label: "Flip H" },
-    { name: "flipV", label: "Flip V" },
-    { name: "rotate", label: "Rotate Delta 30" },
-    { name: "invert", label: "Invert" },
-    { name: "colormap", label: "Apply Colormap" },
-    { name: "reset", label: "Reset" },
+    { name: 'zoomIn', label: 'Zoom' },
+    { name: 'flipH', label: 'Flip H' },
+    { name: 'flipV', label: 'Flip V' },
+    { name: 'rotate', label: 'Rotate Delta 30' },
+    { name: 'invert', label: 'Invert' },
+    { name: 'colormap', label: 'Apply Colormap' },
+    { name: 'reset', label: 'Reset' },
   ] as const;
 
   if (!renderingEngine.isViewportSetup || !renderingEngine.engine) {
     return (
-      <ul className="flex gap-4 w-[649px] text-base justify-between  opacity-50">
+      <ul className="flex w-[649px] justify-between gap-4 text-base opacity-50">
         {actionItems.map((item) => (
           <li
             key={item.name}
-            className="cursor-not-allowed py-3 px-2 text-[#21272A]"
+            className="cursor-not-allowed px-2 py-3 text-[#21272A]"
           >
             {item.label}
           </li>
@@ -69,7 +69,7 @@ const Toolbar = () => {
   }
 
   return (
-    <ul className="flex gap-4 w-[649px] justify-around">
+    <ul className="flex w-[649px] justify-around gap-4">
       {actionItems.map((item) => (
         <ActionItem
           key={item.name}
