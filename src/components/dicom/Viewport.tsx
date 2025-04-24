@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import { ViewportId } from "../../types/dicom";
 import { useDicomViewerStore } from "../../store/dicomViewerStore";
 

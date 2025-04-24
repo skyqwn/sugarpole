@@ -16,7 +16,6 @@ export const useViewportSetup = (
     renderingEngine,
     setRenderingEngine,
     setViewportSetup,
-    selectViewport,
   } = useDicomViewerStore();
 
   const renderingEngineId = "myRenderingEngine";
@@ -104,21 +103,12 @@ export const useViewportSetup = (
           })
         );
 
-        // 도구 그룹 설정
         await setupToolGroup(newRenderingEngine, [
           "LEFT_VIEWPORT",
           "RIGHT_VIEWPORT",
         ]);
 
-        // 뷰포트 설정 완료
         setViewportSetup(true);
-        console.log("뷰포트 설정 완료");
-
-        // 초기 뷰포트 선택
-        setTimeout(() => {
-          selectViewport("LEFT_VIEWPORT");
-          console.log("LEFT_VIEWPORT 명시적 선택 완료");
-        }, 100);
       } catch (error) {
         console.error("뷰포트 설정 중 오류:", error);
       } finally {
@@ -128,7 +118,6 @@ export const useViewportSetup = (
 
     setupViewports();
 
-    // 클린업
     return () => {
       if (renderingEngine.engine) {
         try {
