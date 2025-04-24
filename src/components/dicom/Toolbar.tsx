@@ -28,7 +28,7 @@ const Toolbar = () => {
   const handleAction = useCallback(
     (actionName: keyof ViewportActionType) => {
       if (!renderingEngine.isViewportSetup || !renderingEngine.engine) {
-        console.log('렌더링 엔진이 준비되지 않아 액션을 실행할 수 없습니다.');
+        console.log('렌더링 엔진이 준비되지 않아 액션을 실행할 수 없습니다');
         return;
       }
 
