@@ -17,25 +17,32 @@
 
 /src
 /components
-/common # 공통 UI 컴포넌트 - Button.tsx # 재사용 가능한 버튼 컴포넌트 - Header.tsx # 앱 헤더 컴포넌트
-/dicom # DICOM 관련 컴포넌트 - PageNavigation.tsx # 이미지 페이지네이션 컴포넌트 - Toolbar.tsx # 이미지 조작 도구 모음 - Viewport.tsx # DICOM 이미지 표시 컴포넌트
-/hooks # 커스텀 React 훅
+/common # 공통 UI 컴포넌트
+
+- Button.tsx # 재사용 가능한 버튼 컴포넌트 - Header.tsx # 앱 헤더 컴포넌트
+
+/dicom # DICOM 관련 컴포넌트
+
+- PageNavigation.tsx # 이미지 페이지네이션 컴포넌트
+- Toolbar.tsx # 이미지 조작 도구 모음
+- Viewport.tsx # DICOM 이미지 표시 컴포넌트
 
 /hooks
 
 - useCornerstoneInitialization.ts # Cornerstone.js 초기화
+- useDicomViewport.ts # 뷰포트 관리
+- useImageUpdater.ts # 이미지 업데이트 관리
+- useToolGroup.ts # Cornerstone 도구 설정
+- useViewportActions.ts # 뷰포트 액션(회전, 확대/축소 등)
+- useViewportSetup.ts # 뷰포트 초기 설정
 
-  - useDicomViewport.ts # 뷰포트 관리
-  - useImageUpdater.ts # 이미지 업데이트 관리
-  - useToolGroup.ts # Cornerstone 도구 설정
-  - useViewportActions.ts # 뷰포트 액션(회전, 확대/축소 등)
-  - useViewportSetup.ts # 뷰포트 초기 설정
+/store # 상태 관리
 
-  /store # 상태 관리
+- dicomViewerStore.ts # Zustand 기반 상태 저장소
 
-  - dicomViewerStore.ts # Zustand 기반 상태 저장소
-    /types # TypeScript 타입 정의
-  - dicom.ts # DICOM 관련 타입 정의
-  - App.tsx # 메인 앱 컴포넌트
-  - main.tsx # 앱 엔트리 포인트
-  - index.css # 전역 스타일 및 Tailwind CSS 설정
+/types # TypeScript 타입 정의
+
+- dicom.ts # DICOM 관련 타입 정의
+- App.tsx # 메인 앱 컴포넌트
+- main.tsx # 앱 엔트리 포인트
+- index.css # 전역 스타일 및 Tailwind CSS 설정
