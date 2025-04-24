@@ -21,7 +21,6 @@ export const useViewportActions = (): ViewportActionType => {
     try {
       console.log(`${selectedViewportId} 뷰포트 가져오기 시도`);
       const viewport = engine.getViewport(selectedViewportId) as StackViewport;
-      console.log("뷰포트 가져오기 성공");
       return viewport;
     } catch (e) {
       console.log(`${selectedViewportId} 뷰포트를 찾을 수 없습니다:`, e);

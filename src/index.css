@@ -22,4 +22,7 @@
   .bg-Primary {
     background-color: var(--color-bg-Primary);
   }
+  .border-Primary {
+    border-color: var(--color-bg-Primary);
+  }
 }

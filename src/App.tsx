@@ -23,18 +23,14 @@ export default function App() {
         </div>
       )}
       <Header />
-      <div className="flex border-t-3 border-blue-500 flex-1 h-[903px] gap-1">
-        <Viewport
-          ref={leftRef}
-          id="LEFT_VIEWPORT"
-          className="w-1/2 h-full overflow-hidden"
-        />
+      <section className="w-full flex border-3 border-white flex-1 h-[903px] gap-1">
+        <Viewport ref={leftRef} id="LEFT_VIEWPORT" className="w-1/2 h-full" />
         <Viewport
           ref={rightRef}
           id="RIGHT_VIEWPORT"
-          className="w-1/2 h-full bg-black overflow-hidden"
+          className="w-1/2 h-full "
         />
-      </div>
+      </section>
     </div>
   );
 }

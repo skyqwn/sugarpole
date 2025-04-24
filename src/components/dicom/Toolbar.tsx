@@ -1,4 +1,5 @@
 import React, { useCallback } from "react";
+
 import { useViewportActions } from "../../hooks/useViewportActions";
 import { useDicomViewerStore } from "../../store/dicomViewerStore";
 import { ViewportActionType } from "../../types/dicom";
@@ -9,7 +10,7 @@ interface ActionItemProps {
   onClick: (name: keyof ViewportActionType) => void;
 }
 
-const ActionItem: React.FC<ActionItemProps> = ({ name, label, onClick }) => {
+const ActionItem = ({ name, label, onClick }: ActionItemProps) => {
   return (
     <li
       className="cursor-pointer text-CoolGray-90 font-medium py-3 px2"
@@ -42,7 +43,6 @@ const Toolbar = () => {
     [actions, selectedViewportId, renderingEngine]
   );
 
-  // 툴바 항목 정의
   const actionItems = [
     { name: "zoomIn", label: "Zoom" },
     { name: "flipH", label: "Flip H" },

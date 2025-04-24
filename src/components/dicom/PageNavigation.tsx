@@ -15,10 +15,10 @@ const PageNavigation = () => {
   return (
     <div className="flex items-center gap-4">
       <Button onClick={handlePrevPage} disabled={page === 0}>
-        Previous Image
+        <span className="px-4 gap-[10px] ">Previous Image</span>
       </Button>
       <Button onClick={handleNextPage} disabled={page >= totalPages - 1}>
-        Next Image
+        <span className="px-4 gap-[10px] ">Next Image</span>
       </Button>
     </div>
   );

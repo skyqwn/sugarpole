@@ -1,5 +1,4 @@
 import * as cornerstone from "@cornerstonejs/core";
-import { StackViewport } from "@cornerstonejs/core";
 
 export interface ViewportState {
   id: string;
